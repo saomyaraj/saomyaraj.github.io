@@ -1,89 +1,66 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
-body::-webkit-scrollbar{
-    display: none;
+    min-height: 100vh;
+    background: url("Images/Screenshot_2023-10-22_220742.png") no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-nav {
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
-    padding: 10px 30px;
-    background-color: rgb(0, 0, 0);
+    background: transparent;
+    z-index: 100;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-nav ul li {
-    list-style: none;
-    width: 100px;
-}
-
-nav ul li a {
+.logo {
+    font-size: 32px;
     text-decoration: none;
     color: white;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    transition: transform 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-    color: yellow;
+menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 30px;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    margin-left: 35px;
+}
+
+.menu a:hover {
     font-size: 1.2rem;
     transform: scale(1.2);
-}
-
-.left {
-    font-size: 1.8rem;
-    text-align: left;
-    margin-left: 40px;
-}
-
-
-.firstSection {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 60px 0;
-}
-
-.firstSection>div {
-    width: 30%;
-}
-
-.leftSection {
-    font-size: 2rem;
-    margin: 25px 0;
-    /*background-color: yellow;*/
-}
-
-.rightSection img {
-    width: 90%;
-}
-
-.headline {
-    color: white;
-    font-size: 35px;
-    font-weight: 600;
-    background-size: cover;
-    background-position: center;
-    background-clip: text;
-}
-
-#element {
-    color: rgb(153, 151, 151);
+    color: blue;
 }
