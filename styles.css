@@ -52,6 +52,7 @@ li {
 }
 
 .menu a {
+    position: relative;
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -59,8 +60,18 @@ li {
     margin-left: 35px;
 }
 
-.menu a:hover {
-    font-size: 1.2rem;
-    transform: scale(1.2);
-    color: blue;
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+
+}
+
+.menu a:hover::before {
+    width: 100%;
 }
