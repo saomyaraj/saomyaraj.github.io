@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var preloader = document.getElementById("preloader");
     
     // Set a minimum duration for the preloader to be visible (in milliseconds)
-    var minimumDuration = 3000;
+    var minimumDuration = 2000;
 
     // Record the start time
     var startTime = new Date().getTime();

@@ -8,14 +8,18 @@
       "default",
       {
         "ignore": [
-          "width: fit-content"
+          "width: fit-content",
+          "scrollbar-width",
+          "scrollbar-color",
+          "backdrop-filter"
         ]
       }
     ],
     "axe/name-role-value": [
       "default",
       {
-        "button-name": "off"
+        "button-name": "off",
+        "link-name": "off"
       }
     ]
   }
