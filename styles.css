@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+    font-family: 'Mokoto Glitch';
+    src: url('Fonts/Mokoto\ Glitch.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -93,11 +98,9 @@ header {
     align-items: center;
     z-index: 100;
     background: transparent;
-    /* background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px); */  
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);  
 }
-
-
 
 .logo {
     font-size: 32px;
@@ -166,9 +169,10 @@ li {
 }
 
 .home-content h1 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
     line-height: 1;
+    font-family: 'Mokoto Glitch', sans-serif;
 }
 
 .home-content h3 {
