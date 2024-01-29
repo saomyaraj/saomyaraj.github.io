@@ -99,7 +99,7 @@ header {
     z-index: 100;
     background: transparent;
     background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);  
+    backdrop-filter: blur(0px);  
 }
 
 .logo {
