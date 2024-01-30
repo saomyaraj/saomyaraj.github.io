@@ -5,11 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
     menuIcon.addEventListener('click', function () {
         menu.classList.toggle('active');
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     var preloader = document.getElementById("preloader");
-    
+    var dotsElement = document.getElementById("loadingDots");
+    var dotsInterval;
+
+    // Function to update dots animation
+    function updateDots() {
+        var dots = dotsElement.innerHTML;
+        dots = dots.length < 3 ? dots + '.' : '';
+        dotsElement.innerHTML = dots;
+    }
+
+    // Start updating dots every 500 milliseconds
+    dotsInterval = setInterval(updateDots, 500);
+
     // Set a minimum duration for the preloader to be visible (in milliseconds)
     var minimumDuration = 2000;
 
@@ -38,6 +48,25 @@ document.addEventListener("DOMContentLoaded", function () {
         // Set a timeout to ensure the preloader is hidden after the transition
         setTimeout(function () {
             preloader.style.display = "none";
+            clearInterval(dotsInterval); // Clear the dots interval when the preloader is hidden
         }, 500);
     }
+
+    var tl = gsap.timeline();
+
+    tl.from(".logo, .menu", {
+        y: 100,
+        duration: 1,
+        delay: 1,
+        opacity: 0,
+        stagger: 0.1
+    });
+
+    tl.from(".home h1, .home h3, .home p, .home .btn-box", {
+        y: 50,
+        duration: 1,
+        delay: 1,
+        opacity: 0,
+        stagger: 0.5
+    });
 });

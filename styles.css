@@ -49,6 +49,22 @@
     }
 }
 
+/* Add this style for the spinner-container */
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add this style for the loading text */
+.loading-text {
+    margin-top: 20px; 
+    font-size: 18px; 
+    color: #fff;
+}
+
+
 /* Other styles for preloader */
 #preloader {
     position: fixed;
@@ -64,7 +80,6 @@
     opacity: 1;
     transition: opacity 0.5s;
 }
-
 
 body {
     min-height: 100vh;
