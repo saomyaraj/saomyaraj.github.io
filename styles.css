@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Mokoto Glitch';
-    src: url('Fonts/Mokoto\ Glitch.ttf') format('truetype');
+    src: url('Fonts/Mokoto Glitch.ttf') format('truetype');
 }
 
 * {
@@ -88,6 +88,7 @@ body {
     background-position: center;
     color: #ededed;
     position: relative;
+    overflow: hidden;
 }
 
 body::before {
@@ -191,10 +192,20 @@ li {
 }
 
 .home-content h3 {
+    background-clip: text;
     font-size: 32px;
     font-weight: 700;
-    color: #00abf0;
+    /*color: #00abf0;*/
+    color: #ededed;
+    /*color: transparent;*/
+    /*background-image: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c, #f39c12, #3498db);*/
+    /*animation: colorChange 1s infinite; !* Change the duration as needed *!*/
 }
+
+/*@keyframes colorChange {*/
+/*    0% { background-position: 0% 0%; }*/
+/*    100% { background-position: 200% 0%; }*/
+/*}*/
 
 .home-content p {
     font-size: 16px;
@@ -313,4 +324,26 @@ li {
     .menu.active a {
         color: #ededed;
     }
+}
+
+.home .social-icons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    margin-top: 530px;
+    margin-left: 930px;
+}
+
+.home .icon {
+    margin: 0 15px;
+    font-size: 24px;
+    color: #ffffff; /* Change color as needed */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.home .icon:hover {
+    color: #007bff; /* Change hover color as needed */
 }

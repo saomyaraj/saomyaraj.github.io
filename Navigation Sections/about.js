@@ -50,24 +50,4 @@ document.addEventListener("DOMContentLoaded", function () {
             preloader.style.display = "none";
             clearInterval(dotsInterval); // Clear the dots interval when the preloader is hidden
         }, 500);
-    }
-
-    let tl = gsap.timeline();
-
-    tl.from(".logo, .menu", {
-        y: 50,
-        duration: 1,
-        delay: 2.5,
-        opacity: 0,
-        stagger: 0.1
-    });
-
-    tl.from(".home h1, .home h3, .home p, .home .btn-box, .home .social-icons", {
-        y: 50,
-        duration: 1,
-        delay: 0,
-        opacity: 0,
-        stagger: 0.5
-    });
-
-});
+    }}

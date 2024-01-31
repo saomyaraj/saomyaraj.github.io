@@ -8,5 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="boxicons" level="application" />
+    <orderEntry type="library" name="f46d8e3621" level="application" />
+    <orderEntry type="library" name="gsap" level="application" />
   </component>
 </module>
