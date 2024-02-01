@@ -52,6 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500);
     }
 
+    // document.getElementById('logo').addEventListener('click', function(event) {
+    //     event.preventDefault();  // Prevents the default link behavior
+    //
+    //     // Modify the URL without reloading the page
+    //     history.pushState({}, '', '/'); // Change '/' to the desired URL path
+    // });
+
     let tl = gsap.timeline();
 
     tl.from(".logo, .menu", {

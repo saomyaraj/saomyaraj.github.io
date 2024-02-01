@@ -83,7 +83,7 @@
 
 body {
     min-height: 100vh;
-    background: url("Images/BG Cover.webp") no-repeat;
+    background: url("Images/BG Cover 2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     color: #ededed;
@@ -99,7 +99,7 @@ body::before {
     width: 100%;
     height: 100%;
     background: inherit;
-    filter: blur(2px);
+    filter: blur(1px);
     z-index: -1;
 }
 
@@ -169,7 +169,7 @@ li {
     width: 100%;
 }
 
-.menu a:hover , .menu a.active{
+.menu a:hover {
     color: #0d497d;
 }
 
@@ -195,8 +195,8 @@ li {
     background-clip: text;
     font-size: 32px;
     font-weight: 700;
-    /*color: #00abf0;*/
-    color: #ededed;
+    color: #00abf0;
+    /* color: #ededed; */
     /*color: transparent;*/
     /*background-image: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c, #f39c12, #3498db);*/
     /*animation: colorChange 1s infinite; !* Change the duration as needed *!*/
@@ -217,6 +217,7 @@ li {
 }
 
 .home-content .btn-box {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     height: 50px;
@@ -285,7 +286,6 @@ li {
     display: none;
 }
 
-/* Breakpoints */
 @media (max-width: 992px) {
     .header {
         padding: 1.3rem 5%;
