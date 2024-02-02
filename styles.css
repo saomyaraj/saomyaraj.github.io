@@ -82,13 +82,16 @@
 }
 
 body {
+    overflow: hidden;
+}
+
+.main {
     min-height: 100vh;
-    background: url("Images/BG Cover 2.jpg") no-repeat;
+    background: url("Images/BG Cover.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     color: #ededed;
     position: relative;
-    overflow: hidden;
 }
 
 body::before {
@@ -181,6 +184,7 @@ li {
 }
 
 .home-content {
+    margin-top: 28px;
     max-width: 600px;
 }
 
@@ -195,16 +199,16 @@ li {
     background-clip: text;
     font-size: 32px;
     font-weight: 700;
-    color: #00abf0;
-    /*color: transparent;*/
-    /*background-image: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c, #f39c12, #3498db);*/
-    /*animation: colorChange 1s infinite; !* Change the duration as needed *!*/
+    /* color: #00abf0; */
+    color: transparent;
+    background-image: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c, #f39c12, #3498db);
+    animation: colorChange 1s infinite;
 }
 
-/*@keyframes colorChange {*/
-/*    0% { background-position: 0% 0%; }*/
-/*    100% { background-position: 200% 0%; }*/
-/*}*/
+@keyframes colorChange {
+   0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
 
 .home-content p {
     font-size: 16px;
