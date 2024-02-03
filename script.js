@@ -54,20 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let tl = gsap.timeline();
 
-    tl.from(".logo, .menu", {
+    tl.from(".logo, .menu, .home h1, .home h3, .home p, .home .btn-box, .home .social-icons", {
         y: 50,
         duration: 1,
         delay: 2.5,
         opacity: 0,
-        stagger: 0.1
+        stagger: 0.3
     });
 
-    tl.from(".home h1, .home h3, .home p, .home .btn-box, .home .social-icons", {
-        y: 50,
-        duration: 1,
-        delay: 0,
-        opacity: 0,
-        stagger: 0.5
-    });
+    // tl.from(".home h1, .home h3, .home p, .home .btn-box, .home .social-icons", {
+    //     y: 50,
+    //     duration: 1,
+    //     delay: 0,
+    //     opacity: 0,
+    //     stagger: 0.5
+    // });
 
 });
