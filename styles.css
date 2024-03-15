@@ -96,7 +96,8 @@ body {
     background-size: cover;
     background-position: center;
     color: #ededed;
-    position: relative;
+    position: a;
+    object-fit: cover;
 }
 
 body::before {
@@ -116,6 +117,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 10vh;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
@@ -133,7 +135,7 @@ header {
     font-weight: 600;
 }
 
-menu {
+.menu {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -182,14 +184,18 @@ li {
 }
 
 .home {
+    height: auto;
     display: flex;
     align-items: center;
-    height: 100vh;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     padding: 0 8%;
+    /* padding-top: 10vh; */
+    position: relative;
 }
 
 .home-content {
-    margin-top: 28px;
+    margin-top: 10vh;
     max-width: 600px;
 }
 
@@ -299,9 +305,54 @@ li {
     display: none;
 }
 
+
+
+
+
+.home .social-icons {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    margin-top: 530px;
+    margin-left: auto;
+}
+
+.home .icon {
+    margin: 0 15px;
+    font-size: 24px;
+    color: #ffffff;
+    /* Change color as needed */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.home .icon:hover {
+    color: #007bff;
+    /* Change hover color as needed */
+}
+
 @media (max-width: 992px) {
     .header {
         padding: 1.3rem 5%;
+    }
+    
+    .home{
+        padding-top: 20vh;
+        flex-direction: column;
+    }
+
+    .home-content h1{
+        font-size: 1.7rem;
+    }
+
+    .home-content h3{
+        font-size: 1.3rem;
+    }
+
+    .home .social-icons{
+        margin-top: 100px;
     }
 }
 
@@ -343,28 +394,23 @@ li {
     .menu.active a {
         color: #ededed;
     }
-}
 
-.home .social-icons {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5px;
-    margin-top: 530px;
-    margin-left: 950px;
-}
+    .home{
+        padding-top: 20vh;
+        flex-direction: column;
+    }
 
-.home .icon {
-    margin: 0 15px;
-    font-size: 24px;
-    color: #ffffff;
-    /* Change color as needed */
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
+    .home .social-icons{
+        margin-top: 150px;
+    }
 
-.home .icon:hover {
-    color: #007bff;
-    /* Change hover color as needed */
+    .btn-box{
+        flex-direction: column;;
+    }
+
+    .btn-box a{
+        margin-bottom: 30px;
+        padding: 30px;
+        width: 70%;
+    }
 }
