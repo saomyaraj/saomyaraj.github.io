@@ -50,4 +50,5 @@ document.addEventListener("DOMContentLoaded", function () {
             preloader.style.display = "none";
             clearInterval(dotsInterval); // Clear the dots interval when the preloader is hidden
         }, 500);
-    }}
+    }
+});

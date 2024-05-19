@@ -5,13 +5,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #0d497d; /* Set to your preferred color */
+}
+
+a:hover {
+    color: #021f38; /* Change to your preferred hover color */
+}
+
 body {
     min-height: 100vh;
     /* background: url("E:/Codes/Projects/Portfolio Website/Images/BG Cover.webp") no-repeat; */
-    background-color: #000;
+    background-color: #ededed;
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #000;
     position: relative;
 }
 
@@ -25,4 +34,74 @@ body::before {
     background: inherit;
     filter: blur(2px);
     z-index: -1;
+}
+
+.about {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.intro {
+    margin-top: 15px;
+    padding-left: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.education {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.education p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.experience {
+    background-color: #ededed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.experience p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.skills {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.skills ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.skills li {
+    margin-bottom: 10px;
+}
+
+.achievements {
+    background-color: #ededed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.achievements p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
