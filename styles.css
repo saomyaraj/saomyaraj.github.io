@@ -207,6 +207,8 @@ li {
 }
 
 .home-content h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-clip: text;
     font-size: 32px;
     font-weight: 700;

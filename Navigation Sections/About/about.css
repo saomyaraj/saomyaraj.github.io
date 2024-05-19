@@ -11,7 +11,7 @@ a {
 }
 
 a:hover {
-    color: #021f38; /* Change to your preferred hover color */
+    color: #042a4b; /* Change to your preferred hover color */
 }
 
 body {
@@ -46,12 +46,13 @@ body::before {
     padding-left: 30px;
     margin-left: 30px;
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .education {
     background-color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 30px;
 }
 
@@ -59,12 +60,13 @@ body::before {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
+    font-size: 18px;
 }
 
 .experience {
     background-color: #ededed;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 30px;
 }
 
@@ -72,12 +74,13 @@ body::before {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
+    font-size: 18px;
 }
 
 .skills {
     background-color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 30px;
 }
 
@@ -91,12 +94,13 @@ body::before {
 
 .skills li {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .achievements {
     background-color: #ededed;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 30px;
 }
 
@@ -104,4 +108,5 @@ body::before {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
+    font-size: 18px;
 }
