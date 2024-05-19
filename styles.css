@@ -77,7 +77,6 @@
     width: 100%;
     height: 100%;
     background: #000;
-    /* Change #000 to your preferred background color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,13 +89,22 @@ body {
     overflow: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: #3498db; /* Set to your preferred color */
+}
+
+a:hover {
+    color: #0d497d; /* Change to your preferred hover color */
+}
+
 .main {
     min-height: 100vh;
-    background: url("Images/BG Cover.jpg") no-repeat;
+    background: none;
     background-size: cover;
     background-position: center;
     color: #ededed;
-    position: a;
+    position: relative; /* Fixed the position value here */
     object-fit: cover;
 }
 
@@ -120,19 +128,11 @@ header {
     height: 10vh;
     padding: 20px 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 100;
-    background: transparent;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
-}
-
-.logo {
-    font-size: 32px;
-    text-decoration: none;
-    color: #ededed;
-    font-weight: 600;
 }
 
 .menu {
@@ -140,7 +140,6 @@ header {
     justify-content: space-between;
     text-align: center;
     padding: 10px 30px;
-    color: #ededed;
 }
 
 ul {
@@ -148,6 +147,7 @@ ul {
     display: flex;
     margin: 0;
     padding: 0;
+    color: #000;
 }
 
 li {
@@ -158,7 +158,7 @@ li {
 .menu a {
     position: relative;
     text-decoration: none;
-    color: #ededed;
+    color: #000;
     font-size: 18px;
     transition: all 0.3s ease;
     margin-left: 35px;
@@ -171,7 +171,7 @@ li {
     left: 0;
     width: 0;
     height: 2px;
-    background: #ededed;
+    background: #000;
     transition: .3s;
 }
 
@@ -184,19 +184,18 @@ li {
 }
 
 .home {
-    height: auto;
+    margin-top: 20px;
+    padding-top: 15vh; /* Added padding to prevent overlap with header */
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     padding: 0 8%;
-    /* padding-top: 10vh; */
     position: relative;
 }
 
 .home-content {
-    margin-top: 10vh;
     max-width: 600px;
+    margin-top: 60px;
 }
 
 .home-content h1 {
@@ -204,13 +203,13 @@ li {
     font-weight: 700;
     line-height: 1;
     font-family: 'Mokoto Glitch', sans-serif;
+    color: #000;
 }
 
 .home-content h3 {
     background-clip: text;
     font-size: 32px;
     font-weight: 700;
-    /* color: #00abf0; */
     color: transparent;
     background-image: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c, #f39c12, #3498db);
     animation: colorChange 1s infinite;
@@ -226,12 +225,23 @@ li {
     }
 }
 
+.home .profile-image {
+    margin-left: 50px; /* Adjust the value as needed */
+}
+
+.home .profile-image img {
+    width: 250px; /* Adjust this size as needed */
+    height: 250px; /* Ensure the height is equal to the width */
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border: 4px solid #fff; /* Optional: Add a border around the image */
+}
+
 .home-content p {
     font-size: 16px;
     margin: 10px 50px 10px 0;
     line-height: 1.3;
-    color: #ededed;
-    font-weight: bold;
+    color: #000;
     text-align: justify;
 }
 
@@ -269,7 +279,7 @@ li {
 
 .btn-box a:nth-child(2) {
     background: transparent;
-    color: #ededed;
+    color: #000;
 }
 
 .btn-box a:nth-child(2):hover {
@@ -306,7 +316,6 @@ li {
 }
 
 .home .social-icons {
-    /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,36 +327,34 @@ li {
 .home .icon {
     margin: 0 15px;
     font-size: 24px;
-    color: #ffffff;
-    /* Change color as needed */
+    color: #000;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 .home .icon:hover {
-    color: #007bff;
-    /* Change hover color as needed */
+    color: #007bff; /* Change hover color as needed */
 }
 
 @media (max-width: 992px) {
     .header {
         padding: 1.3rem 5%;
     }
-    
-    .home{
+
+    .home {
         padding-top: 20vh;
         flex-direction: column;
     }
 
-    .home-content h1{
+    .home-content h1 {
         font-size: 1.7rem;
     }
 
-    .home-content h3{
+    .home-content h3 {
         font-size: 1.3rem;
     }
 
-    .home .social-icons{
+    .home .social-icons {
         margin-top: 100px;
     }
 }
@@ -355,6 +362,7 @@ li {
 @media (max-width: 768px) {
     .menu-icon {
         display: inline-flex;
+        color: #000;
     }
 
     .menu {
@@ -388,25 +396,79 @@ li {
     }
 
     .menu.active a {
-        color: #ededed;
+        color: #081b29;
     }
 
-    .home{
+    .home {
         padding-top: 20vh;
         flex-direction: column;
     }
 
-    .home .social-icons{
+    .home .social-icons {
         margin-top: 150px;
     }
+}
 
-    .btn-box{
-        flex-direction: column;;
+/* Add this style for responsive font sizes */
+@media screen and (max-width: 600px) {
+    .home-content h1 {
+        font-size: 30px;
     }
 
-    .btn-box a{
-        margin-bottom: 30px;
-        padding: 30px;
-        width: 70%;
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .btn-box a {
+        width: 130px;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Add this style for responsive layout adjustments */
+@media screen and (max-width: 768px) {
+    .home {
+        padding-top: 15vh;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .profile-image {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .home .social-icons {
+        margin-top: 20px;
+    }
+}
+
+/* Add this style for even smaller screens */
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: 24px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home .social-icons {
+        margin-top: 10px;
     }
 }
