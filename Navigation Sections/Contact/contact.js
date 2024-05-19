@@ -24,3 +24,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         alert('Message failed to send.');
     });
 });
+
+let tl = gsap.timeline();
+
+    tl.from(".container, .address, #contactForm, .social-icons", {
+        y: 50,
+        duration: 1,
+        delay: 1,
+        opacity: 0,
+        stagger: 0.3
+    });
