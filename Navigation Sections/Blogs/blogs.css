@@ -7,11 +7,12 @@
 
 a {
     text-decoration: none;
-    color: #0d497d; /* Set to your preferred color */
+    color: #0d497d;
 }
 
 a:hover {
-    color: #042a4b; /* Change to your preferred hover color */
+    color: #042a4b;
+    text-decoration: underline;
 }
 
 body {
