@@ -1,6 +1,6 @@
 let tl = gsap.timeline();
 
-    tl.from(".about, .intro, .education, .experience, .skills, .achievements", {
+    tl.from(".about, .intro, .education, .experience, .skills, .achievements, .cocurriculars", {
         y: 50,
         duration: 1,
         delay: 1,

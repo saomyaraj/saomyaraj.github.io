@@ -110,3 +110,17 @@ body::before {
     margin-left: 30px;
     font-size: 18px;
 }
+
+.cocurriculars {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.cocurriculars p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-size: 18px;
+}
