@@ -7,17 +7,80 @@
 
 a {
     text-decoration: none;
-    color: #0d497d; /* Set to your preferred color */
+    color: #3498db; /* Set to your preferred color */
 }
 
 a:hover {
-    color: #042a4b; /* Change to your preferred hover color */
+    color: #0d497d; /* Change to your preferred hover color */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    margin-left: 35px;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: .3s;
+}
+
+.menu a:hover::before {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: #0d497d;
 }
 
 body {
     min-height: 100vh;
     /* background: url("E:/Codes/Projects/Portfolio Website/Images/BG Cover.webp") no-repeat; */
-    background-color: #ededed;
+    background-color: #fff;
     background-size: cover;
     background-position: center;
     color: #000;
@@ -37,7 +100,7 @@ body::before {
 }
 
 .about {
-    margin-top: 20px;
+    margin-top: 80px;
     padding-left: 30px;
     text-align: center;
 }
@@ -51,7 +114,7 @@ body::before {
 }
 
 .education {
-    background-color: #fff;
+    background-color: #ededed;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 30px;
@@ -65,7 +128,7 @@ body::before {
 }
 
 .experience {
-    background-color: #ededed;
+    background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 30px;
@@ -75,26 +138,6 @@ body::before {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    font-size: 18px;
-}
-
-.skills {
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-}
-
-.skills ul {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 30px;
-    list-style-type: none;
-    padding: 0px;
-}
-
-.skills li {
-    margin-bottom: 10px;
     font-size: 18px;
 }
 
