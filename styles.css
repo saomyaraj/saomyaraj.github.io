@@ -228,6 +228,7 @@ li {
 }
 
 .home .profile-image {
+    margin-top: 50px;
     margin-left: 200px; /* Adjust the value as needed */
 }
 

@@ -54,10 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let tl = gsap.timeline();
 
-    tl.from(".logo, .menu, .home h1, .home h3, .home .profile-image, .home p, .home .btn-box", {
+    tl.from(".logo, .menu, .home h1, .home h3, .home p, .home .btn-box", {
         y: 50,
         duration: 1,
         delay: 2.5,
+        opacity: 0,
+        stagger: 0.3
+    });
+
+    let t2 = gsap.timeline();
+
+    t2.from(".home .profile-image", {
+        y: 50,
+        duration: 1.5,
+        delay: 3.5,
         opacity: 0,
         stagger: 0.3
     });
