@@ -1,13 +1,14 @@
-# Portfolio Website
+# Website
 
 ## Overview
 
-Welcome to my portfolio website! This website showcases my skills, projects, and provides information about me. Feel free to explore and learn more about my journey in the world of software development.
+Welcome to my website! This website showcases my skills, projects, and provides information about me. Feel free to explore and learn more about my journey in the world of software development.
 
 ## Features
 
 - About Me: Get to know more about who I am and my background.
 - Projects: Explore the various projects I have worked on.
+- Blogs: Read the blogs which I had written from my learnings.
 - Contact: Reach out to me for collaboration, questions, or just to say hello.
 
 ## Technologies
@@ -21,19 +22,19 @@ A. Make sure you have a suitable development environment.
 B. Clone this repository to your local machine using the following command:
 
 ```bash
-git clone <https://github.com/saomyaraj812/Portfolio-Website.git>
+git clone <https://github.com/saomyaraj/saomyaraj.github.io.git>
 ```
 
 C. Navigate to the project directory and install the necessary dependencies:
 
 ```bash
-cd portfolio-website
+cd  website
 pip install -r requirements.txt
 ```
 
 ## Usage
 
-Explore the different sections of the website to learn more about my skills, projects, and how to get in touch.
+Explore the different sections of the website to learn more about my skills, projects, blogs and how to get in touch.
 
 ## Contributing
 
@@ -52,4 +53,4 @@ This project is licensed under the MIT Licence - see the [LICENSE.md] file for d
 
 ## Contact
 
-If you have any questions or want to get in touch, feel free to contact me at jhaamrit630@gmail.com.
+If you have any questions or want to get in touch, feel free to [Email me at](mailto:saomyaraj.dev@gmail.com).
