@@ -184,7 +184,7 @@ li {
 }
 
 .home {
-    margin-top: 20px;
+    margin-top: 70px;
     padding-top: 15vh; /* Added padding to prevent overlap with header */
     display: flex;
     align-items: center;
@@ -199,7 +199,7 @@ li {
 }
 
 .home-content h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 1;
     font-family: 'Mokoto Glitch', sans-serif;
@@ -228,7 +228,7 @@ li {
 }
 
 .home .profile-image {
-    margin-left: 50px; /* Adjust the value as needed */
+    margin-left: 200px; /* Adjust the value as needed */
 }
 
 .home .profile-image img {
@@ -317,27 +317,6 @@ li {
     display: none;
 }
 
-.home .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5px;
-    margin-top: 530px;
-    margin-left: auto;
-}
-
-.home .icon {
-    margin: 0 15px;
-    font-size: 24px;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.home .icon:hover {
-    color: #007bff; /* Change hover color as needed */
-}
-
 @media (max-width: 992px) {
     .header {
         padding: 1.3rem 5%;
@@ -354,10 +333,6 @@ li {
 
     .home-content h3 {
         font-size: 1.3rem;
-    }
-
-    .home .social-icons {
-        margin-top: 100px;
     }
 }
 
@@ -405,10 +380,6 @@ li {
         padding-top: 20vh;
         flex-direction: column;
     }
-
-    .home .social-icons {
-        margin-top: 150px;
-    }
 }
 
 /* Add this style for responsive font sizes */
@@ -454,10 +425,6 @@ li {
         height: 200px;
         margin: 0 auto;
     }
-
-    .home .social-icons {
-        margin-top: 20px;
-    }
 }
 
 /* Add this style for even smaller screens */
@@ -468,9 +435,5 @@ li {
 
     .home-content h3 {
         font-size: 20px;
-    }
-
-    .home .social-icons {
-        margin-top: 10px;
     }
 }

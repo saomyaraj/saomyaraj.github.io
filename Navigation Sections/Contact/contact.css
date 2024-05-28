@@ -153,12 +153,12 @@ button:hover {
 
 .social-icons a {
     text-decoration: none;
-    color: #071b91;
+    color: #000;
     font-size: 24px;
     margin: 0 10px;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-    color: #7b1fa2;
+    color: #007bff;
 }
