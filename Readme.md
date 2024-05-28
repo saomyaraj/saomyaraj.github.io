@@ -53,4 +53,4 @@ This project is licensed under the MIT Licence - see the [LICENSE.md] file for d
 
 ## Contact
 
-If you have any questions or want to get in touch, feel free to [Email me at](mailto:saomyaraj.dev@gmail.com).
+If you have any questions or want to get in touch, feel free to [Email me](mailto:saomyaraj.dev@gmail.com).
