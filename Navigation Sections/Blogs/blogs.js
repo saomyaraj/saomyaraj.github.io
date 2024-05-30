@@ -1,6 +1,6 @@
 let tl = gsap.timeline();
 
-tl.from(".blogs, .blog-content, .linux, .git, .genai-Ed", {
+tl.from(".heading, .blogs, .blog-content", {
     y: 50,
     duration: 1,
     delay: 1,

@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let tl = gsap.timeline();
 
-    tl.from(".projects, .project-head, .project-list, .home h3, .home .profile-image, .home p, .home .btn-box, .home .social-icons", {
+    tl.from(".projects, .heading, .project-head, .project-list, .home h3, .home .profile-image, .home p, .home .btn-box, .home .social-icons", {
         y: 50,
         duration: 1,
         delay: 1,
