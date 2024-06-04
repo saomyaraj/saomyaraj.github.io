@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let tl = gsap.timeline();
 
-    tl.from(".logo, .menu, .home h1, .home h3, .home p, .home .btn-box", {
+    tl.from(".logo, .menu, .home h1, .home h3, .home-para, .home .btn-box", {
         y: 50,
         duration: 1,
         delay: 2.5,
