@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { title: "Attendi-Fi", description: "Wi-Fi based Classroom Attendance Application", image: "project1.jpg", url: "https://github.com/saomyaraj/Attendi-Fi" },
         { title: "DermaX", description: "Skin Disease Detection Application", image: "project2.jpg", url: "https://github.com/saomyaraj/DermaX" },
         { title: "Sentivoice", description: "Speech Emotion Recognition", image: "project3.jpg", url: "https://github.com/saomyaraj/Speech-Emotion-Recognition" },
-        { title: "OS Project", description: "CPU Scheduling Algorithm", image: "project3.jpg", url: "https://scheduling-algorithm-os.vercel.app/" },
-        { title: "DBMS Project", description: "Supermarket Management System", image: "project3.jpg", url: "https://github.com/saomyaraj/Supermarket-Management-System" }
+        { title: "Backlit Flutter", description: "Image Enhancement App", image: "project4.jpg", url: "https://github.com/saomyaraj/Backlit-Image-App" },
+        { title: "DBMS Project", description: "Supermarket Management System", image: "project5.jpg", url: "https://github.com/saomyaraj/Supermarket-Management-System" }
     ];
 
     const projectList = document.querySelector(".project-list");
