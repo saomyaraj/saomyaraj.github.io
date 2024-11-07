@@ -1,69 +1,102 @@
 document.addEventListener("DOMContentLoaded", () => {
     const projects = [
-        { title: "Attendi-Fi", description: "Wi-Fi based Classroom Attendance Application", image: "project1.jpg", url: "https://github.com/saomyaraj/Attendi-Fi" },
-        { title: "DermaX", description: "Skin Disease Detection Application", image: "project2.jpg", url: "https://github.com/saomyaraj/DermaX" },
-        { title: "Sentivoice", description: "Speech Emotion Recognition", image: "project3.jpg", url: "https://github.com/saomyaraj/Speech-Emotion-Recognition" },
-        { title: "Backlit Flutter", description: "Image Enhancement App", image: "project4.jpg", url: "https://github.com/saomyaraj/Backlit-Image-App" },
-        { title: "DBMS Project", description: "Supermarket Management System", image: "project5.jpg", url: "https://github.com/saomyaraj/Supermarket-Management-System" }
+        {
+            title: "ScholarNet Research",
+            description: "Academic Collaboration Platform for Research and Discussion",
+            image: "Images/Projects/scholarnet.png",
+            url: "https://scholarnet-research.vercel.app/"
+        },
+        {
+            title: "Attendi-Fi",
+            description: "Wi-Fi based Classroom Attendance Application",
+            image: "Images/Projects/attendifi.png",
+            url: "https://github.com/saomyaraj/Attendi-Fi"
+        },
+        {
+            title: "Backlit Flutter",
+            description: "Low-Light Image Enhancement App",
+            image: "Images/Projects/backlit.png",
+            url: "https://github.com/saomyaraj/Backlit-Image-App"
+        },
+        {
+            title: "OnlyPDEU",
+            description: "Campus Networking and Collaboration Platform",
+            image: "Images/Projects/onlypdeu.jpg",
+            url: "https://github.com/saomyaraj/Supermarket-Management-System"
+        }, 
+        {
+            title: "ByteBite",
+            description: "An AI Based Micro-Learning Platform",
+            image: "Images/Projects/bytebite.jpg",
+            url: "https://github.com/saomyaraj/ByteBite"
+        },
+        {
+            title: "Sentivoice",
+            description: "Speech Emotion Recognition",
+            image: "Images/Projects/sentivoice.png",
+            url: "https://github.com/saomyaraj/Speech-Emotion-Recognition"
+        },
+        {
+            title: "ForecastFlow",
+            description: "Transformer based Energy Consumption Forecasting",
+            image: "Images/Projects/forecastflow.jpg",
+            url: "https://github.com/saomyaraj/Energy-Forecasting"
+        },
+        {
+            title: "DermaX",
+            description: "Skin Disease Detection Application",
+            image: "Images/Projects/dermax.jpg",
+            url: "https://github.com/saomyaraj/DermaX"
+        },
+        {
+            title: "SmartMart",
+            description: "Supermarket Management System",
+            image: "Images/Projects/smartmart.jpg",
+            url: "https://github.com/saomyaraj/Supermarket-Management-System"
+        }
     ];
 
-    const projectList = document.querySelector(".project-list");
+    const projectsGrid = document.querySelector(".projects-grid");
 
     projects.forEach(project => {
-        const projectDiv = document.createElement("div");
-        projectDiv.classList.add("project");
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("project-card");
 
         const projectImage = document.createElement("img");
         projectImage.src = project.image;
         projectImage.alt = `${project.title} Image`;
 
-        const projectInfo = document.createElement("div");
-        projectInfo.classList.add("project-info");
+        const projectContent = document.createElement("div");
+        projectContent.classList.add("project-content");
 
         const projectTitle = document.createElement("h3");
-        const projectLink = document.createElement("a");
-        projectLink.href = project.url;
-        projectLink.textContent = project.title;
-        projectLink.target = "_blank"; // Open link in a new tab
-
-        projectTitle.appendChild(projectLink);
+        projectTitle.textContent = project.title;
 
         const projectDescription = document.createElement("p");
         projectDescription.textContent = project.description;
 
-        projectInfo.appendChild(projectTitle);
-        projectInfo.appendChild(projectDescription);
+        const projectLink = document.createElement("a");
+        projectLink.href = project.url;
+        projectLink.textContent = "View Project";
+        projectLink.target = "_blank";
 
-        projectDiv.appendChild(projectImage);
-        projectDiv.appendChild(projectInfo);
+        projectContent.appendChild(projectTitle);
+        projectContent.appendChild(projectDescription);
+        projectContent.appendChild(projectLink);
 
-        projectList.appendChild(projectDiv);
+        projectCard.appendChild(projectImage);
+        projectCard.appendChild(projectContent);
+
+        projectsGrid.appendChild(projectCard);
     });
-});
 
-let tl = gsap.timeline();
+    let tl = gsap.timeline();
 
-    tl.from(".projects, .heading, .project-head, .project-list, .home h3, .home .profile-image, .home p, .home .btn-box, .home .social-icons", {
+    tl.from(".projects-section > *", {
         y: 50,
         duration: 1,
-        delay: 1,
+        delay: 0.5,
         opacity: 0,
-        stagger: 0.3
-});
-
-let lastScrollTop = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-        // Scroll down
-        header.classList.add('header-hidden');
-    } else {
-        // Scroll up
-        header.classList.remove('header-hidden');
-    }
-
-    lastScrollTop = scrollTop;
+        stagger: 0.2
+    });
 });

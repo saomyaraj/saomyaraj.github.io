@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../Images/Tab-Logo.ico">
-    <link rel="stylesheet" href="Navigation Sections/Projects/projects.css">
+    <link rel="stylesheet" href="/Navigation Sections/Projects/projects.css">
     <title>Projects</title>
 </head>
-
 <body>
     <header class="header">
         <label for="" class="menu-icon">
             <i class='bx bx-menu'></i>
         </label>
-
         <nav class="menu">
             <ul>
                 <li><a href="/">Home</a></li>
@@ -26,20 +23,21 @@
         </nav>
     </header>
 
-    <div class="heading">
-        <h1 class="project-head">Projects</h1>
-    </div>
+    <main>
+        <section class="projects-section">
+            <div class="projects-header">
+                <h1>My Projects</h1>
+                <p>A collection of my personal and academic projects.</p>
+                <p>Feel free to use, contribute, or offer any suggestions—you’re always welcome!</p>
+            </div>
 
-    <div class="projects">
-        <div class="project-list">
-            <!-- This section will be dynamically populated by JavaScript -->
-        </div>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <div class="projects-grid">
+                <!-- This section will be dynamically populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="Navigation Sections/Projects/projects.js"></script>
 </body>
-
 </html>

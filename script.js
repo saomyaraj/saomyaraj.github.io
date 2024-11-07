@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .from(".profile-image", {
                 y: 30,
                 opacity: 0,
-                duration: 0.7
+                delay: 0.1,
+                duration: 0.6
             });
     };
 
