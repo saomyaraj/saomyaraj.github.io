@@ -1,26 +1,49 @@
-let tl = gsap.timeline();
+document.addEventListener('DOMContentLoaded', () => {
+    let tl = gsap.timeline();
 
-tl.from(".heading, .blogs, .blog-content", {
-    y: 50,
-    duration: 1,
-    delay: 1,
-    opacity: 0,
-    stagger: 0.3
-});
+    // Animate research papers section
+    tl.from('.research-papers', {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out'
+    })
+    .from('.paper-card', {
+        y: 20,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'power2.out'
+    }, '-=0.4')
+    
+    // Animate blogs section
+    .from('.blogs', {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out'
+    }, '-=0.2')
+    .from('.blog-card', {
+        y: 20,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power2.out'
+    }, '-=0.4');
 
-let lastScrollTop = 0;
-const header = document.querySelector('.header');
+    // Header hide/show on scroll
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
 
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-        // Scroll down
-        header.classList.add('header-hidden');
-    } else {
-        // Scroll up
-        header.classList.remove('header-hidden');
-    }
-
-    lastScrollTop = scrollTop;
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
 });
