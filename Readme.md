@@ -8,7 +8,7 @@ Welcome to my website! This website showcases my skills, projects, and provides 
 
 - About Me: Get to know more about who I am and my background.
 - Projects: Explore the various projects I have worked on.
-- Blogs: Read the blogs which I had written from my learnings.
+- Publications: Read the Research Papers and Blogs which I had written from my learnings.
 - Contact: Reach out to me for collaboration, questions, or just to say hello.
 
 ## Technologies

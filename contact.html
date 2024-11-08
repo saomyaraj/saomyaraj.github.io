@@ -1,9 +1,10 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../../Images/Tab-Logo.ico">
+    <link rel="icon" type="image/x-icon" href="Images/Tab-Logo.ico">
     <title>Contact</title>
     <link rel="stylesheet" href="Navigation Sections/Contact/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -14,47 +15,54 @@
         <label for="" class="menu-icon">
             <i class='bx bx-menu'></i>
         </label>
-
         <nav class="menu">
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html"  class="active">Publications</a></li>
+                <li><a href="publications.html">Publications</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <div class="container">
-        <h1>Have Some Questions?</h1>
-        <div class="address">
-            <span>Gandhinagar</span>
-            <span class="separator"> | </span>
-            <span>India</span>
-            <span class="address-detail">Contact me for more details, May-2012</span>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h1>Get in Touch</h1>
+            <div class="address">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <span>Gandhinagar, India</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <h2>Follow Me On:</h2>
+                <a href="https://github.com/saomyaraj/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/saomyaraj812" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://saomyaraj.hashnode.dev/" class="icon" target="_blank"><i class="fa-brands fa-hashnode"></i></a>
+                <a href="https://saomyaraj.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="https://twitter.com/saomyaraj_" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/saomyaraj_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-        <form id="contactForm">
-            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-            <input type="email" id="email" name="email" placeholder="What's your email?" required>
-            <textarea id="questions" name="questions" placeholder="Your questions..." required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="social-icons">
-            <h2>Follow Me On:</h2>
-            <a href="https://github.com/saomyaraj/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/saomyaraj812" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://saomyaraj.hashnode.dev/" class="icon" target="_blank"><i class="fa-brands fa-hashnode"></i></a>
-            <a href="https://saomyaraj.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
-            <a href="https://x.com/saomyaraj_" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/saomyaraj_/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <div class="contact-form">
+            <h2>Have Some Questions?</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="What's your email?" required>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-anonymous"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="Navigation Sections/Contact/contact.js"></script>
 </body>
