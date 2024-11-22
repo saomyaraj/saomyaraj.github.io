@@ -22,31 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "OnlyPDEU",
             description: "Campus Networking and Collaboration Platform",
             image: "Images/Projects/onlypdeu.jpg",
-            url: "https://github.com/saomyaraj/Supermarket-Management-System"
+            url: "https://github.com/saomyaraj/OnlyPDEU"
         }, 
         {
             title: "ByteBite",
             description: "An AI Based Micro-Learning Platform",
             image: "Images/Projects/bytebite.jpg",
             url: "https://github.com/saomyaraj/ByteBite"
-        },
-        {
-            title: "Sentivoice",
-            description: "Speech Emotion Recognition",
-            image: "Images/Projects/sentivoice.png",
-            url: "https://github.com/saomyaraj/Speech-Emotion-Recognition"
-        },
-        {
-            title: "ForecastFlow",
-            description: "Transformer based Energy Consumption Forecasting",
-            image: "Images/Projects/forecastflow.jpg",
-            url: "https://github.com/saomyaraj/Energy-Forecasting"
-        },
-        {
-            title: "DermaX",
-            description: "Skin Disease Detection Application",
-            image: "Images/Projects/dermax.jpg",
-            url: "https://github.com/saomyaraj/DermaX"
         },
         {
             title: "SmartMart",

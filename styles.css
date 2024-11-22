@@ -147,14 +147,11 @@ body::before {
 
 .menu ul {
     list-style: none;
-    /* Removes bullet points */
     display: flex;
     gap: 40px;
     align-items: center;
     padding: 0;
-    /* Removes default padding */
     margin: 0;
-    /* Removes default margin */
 }
 
 
@@ -314,6 +311,7 @@ body::before {
     color: #ededed;
     cursor: pointer;
     display: none;
+    z-index: 300;
 }
 
 .scroll-progress {
@@ -352,61 +350,6 @@ body::before {
     }
 }
 
-@media (max-width: 768px) {
-    .header {
-        height: 60px;
-    }
-
-    .menu ul {
-        display: none;
-    }
-
-    .menu.active ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 20px 0;
-        gap: 20px;
-    }
-
-    .menu-icon {
-        display: block;
-        font-size: 24px;
-    }
-
-    .home {
-        padding: 80px 5% 0;
-    }
-
-    .home-content h1 {
-        font-size: 32px;
-    }
-
-    .home-para p {
-        font-size: 14px;
-    }
-
-    .profile-image img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .btn-box {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .btn-box a {
-        width: 100%;
-    }
-}
-
-/* Add this style for responsive font sizes */
 /* Tablet */
 @media screen and (max-width: 1024px) {
     .header {
@@ -434,70 +377,86 @@ body::before {
 /* Mobile */
 
 @media screen and (max-width: 768px) {
-    .home .profile-image {
-        margin-left: 0;
-        /* Remove left margin on mobile */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .header {
-        height: 60px;
+    .menu-icon {
+        display: block;
+        z-index: 200;
+        color: #000;
     }
 
     .menu ul {
         display: none;
+        background: rgba(255, 255, 255, 0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding-top: 80px;
+        align-items: center;
+        z-index: 100;
     }
 
     .menu.active ul {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 20px 0;
-        gap: 20px;
-    }
-
-    .menu-icon {
-        display: block;
-        font-size: 24px;
     }
 
     .home {
-        padding: 100px 5% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home .profile-image {
+        align-self: center;
+        margin: -70px 0;
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .home .profile-image img {
+        width: 150px;
+        height: 150px;
+        max-width: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+    .home-content {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        margin: 10px 0;
         text-align: center;
     }
 
-    .home-content {
-        margin: 0 auto;
-    }
-
-    .profile-image {
-        margin: 30px auto 0;
-    }
-
     .btn-box {
-        margin: 30px auto;
-    }
+        width: 100%; 
+        max-width: 250px;
+        height: auto;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+     }
+     
+     .btn-box a {
+        width: 100%;
+        padding: 20px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    
 }
-@media (max-width: 480px) {
-    .home-content h1 {
-        font-size: 28px;
-    }
 
-    .home-para p {
-        font-size: 14px;
-    }
-
-    .profile-image img {
-        width: 160px;
-        height: 160px;
-    }
-}
 /* Small Mobile */
 @media screen and (max-width: 480px) {
     .home-content h1 {

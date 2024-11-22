@@ -55,3 +55,21 @@ document.addEventListener("DOMContentLoaded", () => {
         startAnimations();
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.querySelector('.menu-icon');
+    const menu = document.querySelector('.menu');
+
+    menuIcon.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent event from bubbling
+        menu.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+            menu.classList.remove('active');
+        }
+    });
+});
