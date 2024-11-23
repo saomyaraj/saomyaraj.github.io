@@ -1,40 +1,69 @@
-// contact.js
-document.addEventListener('DOMContentLoaded', (event) => {
-    emailjs.init('X-f4_HQ_7kJUJKcxz'); // Replace with your EmailJS user ID
-});
+(function() {
+    emailjs.init("X-f4_HQ_7kJUJKcxz");
+})();
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-
-    emailjs.send('service_2ic20gc', 'template_4dljcrr', {
-        firstName,
-        lastName,
-        email,
-        subject,
-        message
+document.addEventListener('DOMContentLoaded', () => {
+    // GSAP Animation
+    const tl = gsap.timeline();
+    tl.from(".contact-info", {
+        x: -50,
+        duration: 1,
+        opacity: 0,
     })
-    .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Message sent successfully!');
-        document.getElementById('contactForm').reset();
-    }, (error) => {
-        console.log('FAILED...', error);
-        alert('Message failed to send.');
-    });
+    .from(".contact-form", {
+        x: 50,
+        duration: 1,
+        opacity: 0,
+    }, "-=0.8")
+    .from(".social-icons a", {
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1
+    }, "-=0.5");
 });
 
-let tl = gsap.timeline();
-tl.from(".contact-container > *", {
-    y: 50,
-    duration: 1,
-    delay: 0.5,
-    opacity: 0,
-    stagger: 0.2
+// Contact form submission
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+   
+    const submitButton = document.getElementById('submitButton');
+    const buttonText = submitButton.querySelector('.button-text');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    const successMessage = document.getElementById('successMessage');
+   
+    submitButton.disabled = true;
+    buttonText.textContent = 'Sending...';
+    loadingSpinner.style.display = 'inline-block';
+
+    try {
+        const templateParams = {
+            from_name: `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`,
+            to_name: "Admin",
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value,
+        };
+        const response = await emailjs.send('service_2ic20gc', 'template_70gwzio', templateParams);
+       
+        if (response.status === 200) {
+            successMessage.classList.add('show');
+            document.getElementById('contactForm').reset();
+           
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 3000);
+        }
+    } catch (error) {
+        console.error('Failed to send message:', error);
+        alert('Failed to send message. Please try again.');
+    } finally {
+        submitButton.disabled = false;
+        buttonText.textContent = 'Send Message';
+        loadingSpinner.style.display = 'none';
+    }
 });
 
 let lastScrollTop = 0;
@@ -42,10 +71,8 @@ const header = document.querySelector('.header');
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
-        // Scroll down
         header.classList.add('header-hidden');
     } else {
-        // Scroll up
         header.classList.remove('header-hidden');
     }
     lastScrollTop = scrollTop;
