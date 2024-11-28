@@ -16,7 +16,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Add this style for the neon background */
 .spinner {
     background: linear-gradient(45deg, #00ffea, #f76f00, #00ffea);
     background-size: 200% 200%;
@@ -39,7 +38,6 @@ html {
 
 .spinner {
     border: 4px solid #fff;
-    /* Change #fff to your preferred border color */
     border-top: 4px solid transparent;
     border-radius: 50%;
     width: 40px;
@@ -57,7 +55,6 @@ html {
     }
 }
 
-/* Add this style for the spinner-container */
 .spinner-container {
     display: flex;
     flex-direction: column;
@@ -65,15 +62,12 @@ html {
     justify-content: center;
 }
 
-/* Add this style for the loading text */
 .loading-text {
     margin-top: 20px;
     font-size: 18px;
     color: #fff;
 }
 
-
-/* Other styles for preloader */
 #preloader {
     position: fixed;
     top: 0;
@@ -96,12 +90,10 @@ body {
 a {
     text-decoration: none;
     color: #3498db;
-    /* Set to your preferred color */
 }
 
 a:hover {
     color: #0d497d;
-    /* Change to your preferred hover color */
 }
 
 .main {
@@ -111,7 +103,6 @@ a:hover {
     background-position: center;
     color: #ededed;
     position: relative;
-    /* Fixed the position value here */
     object-fit: cover;
 }
 
@@ -133,10 +124,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 70px;
-    /* Fixed height */
     padding: 0 8%;
     background: rgba(255, 255, 255, 0.95);
-    /* Semi-transparent white */
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
