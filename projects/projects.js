@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
             url: "https://github.com/saomyaraj/Attendi-Fi"
         },
         {
-            title: "Backlit Flutter",
-            description: "Low-Light Image Enhancement App",
+            title: "Imagen",
+            description: "AI based Low-Light Image Enhancement App",
             image: "../Images/Projects/backlit.png",
-            url: "https://github.com/saomyaraj/Backlit-Image-App"
+            url: "https://github.com/saomyaraj/Imagen"
         },
         {
             title: "OnlyPDEU",
